@@ -5,6 +5,7 @@ version: 2.0
 profile: marketing
 
 model-paths: ["models"]
+
 clean-targets:
   - "target"
   - "dbt_packages"

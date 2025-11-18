@@ -25,11 +25,13 @@ on-run-start:
 on-run-end:
   - alter warehouse transforming set warehouse_size=xsmall;
   - "{{ grant_all_on_schemas(schemas, 'transformer') }}"
+
 vars:
   start_date: '1999-01-01'
   test: 'false'
   fct_order_items: mock_source__fct_order_items
   dbt_metrics_calendar_model: all_days
+
 models:
   +automatic_clustering: true
   +query_tag: stephan-sandbox
@@ -50,14 +52,19 @@ models:
       +group: bi_team
       core:
         +materialized: table
+  marketing:
+    +schema: marketing
+ 
 snapshots:
-  stephans_snow_sandbox:
+  platform:
     +schema: "{% if target.name == 'prod' %}snaps{% else %}{{ target.schema }}{% endif %}"
+
 seeds:
-  stephans_snow_sandbox:
+  platform:
     snowflake_contract_rates:
       +column_types:
         effective_date: DATE
         rate: NUMBER
+
 flags:
   require_generic_test_arguments_property: true
