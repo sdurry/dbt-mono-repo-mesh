@@ -42,9 +42,11 @@ models:
       - transformer
   platform:
     staging:
+      +schema: staging
       +group: data_engineering
       +materialized: view
     marts:
+      +schema: marts
       +group: bi_team
       core:
         +materialized: table

@@ -1,5 +1,5 @@
 projects:
-  - name: hub_project
+  - name: platform
 
 packages:
   - package: dbt-labs/dbt_utils
