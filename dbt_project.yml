@@ -51,10 +51,6 @@ models:
       +group: bi_team
       core:
         +materialized: table
- 
-snapshots:
-  platform:
-    +schema: "{% if target.name == 'prod' %}snaps{% else %}{{ target.schema }}{% endif %}"
 
 seeds:
   platform:
