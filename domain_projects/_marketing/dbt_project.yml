@@ -17,5 +17,6 @@ models:
     relation: true
     columns: true
   +copy_grants: true
+  +schema: marketing
 flags:
   require_generic_test_arguments_property: true

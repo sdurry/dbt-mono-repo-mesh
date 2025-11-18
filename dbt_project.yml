@@ -52,8 +52,6 @@ models:
       +group: bi_team
       core:
         +materialized: table
-  marketing:
-    +schema: marketing
  
 snapshots:
   platform:
