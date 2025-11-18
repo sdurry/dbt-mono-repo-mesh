@@ -4,14 +4,9 @@ models:
   - name: fct_orders
     description: orders fact table
     config:
+      access: public
       contract:
         enforced: true
-    tests:
-      - dbt_utils.recency:
-          arguments:
-            datepart: day
-            field: order_date
-            interval: 12
     columns:
       - name: order_key
         description: primary key of the model

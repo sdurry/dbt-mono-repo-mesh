@@ -4,6 +4,7 @@ models:
   - name: dim_customers
     description: Customer dimensions table
     config:
+      access: public
       contract:
         enforced: true
     constraints:

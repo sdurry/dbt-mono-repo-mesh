@@ -1,0 +1,20 @@
+config-version: 2
+
+name: marketing
+version: 2.0
+profile: marketing
+
+model-paths: ["models"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  +automatic_clustering: true
+  +query_tag: stephan-marketing
+  +persist_docs:
+    relation: true
+    columns: true
+  +copy_grants: true
+flags:
+  require_generic_test_arguments_property: true

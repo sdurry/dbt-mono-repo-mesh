@@ -1,6 +1,6 @@
 config-version: 2
 
-name: stephans_snow_sandbox
+name: platform
 version: 2.0
 profile: tpch
 
@@ -40,7 +40,7 @@ models:
   +grants:
     select:
       - transformer
-  stephans_snow_sandbox:
+  platform:
     staging:
       +group: data_engineering
       +materialized: view
