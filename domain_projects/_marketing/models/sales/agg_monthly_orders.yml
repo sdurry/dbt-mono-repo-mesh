@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: agg_monthly_orders
+    description:
+    config:
+      materialized: table
+      contract:
+        enforced: true
+    columns:
+      - name: order_month
+        data_type: date
+      - name: total_orders
+        data_type: integer
+      - name: total_sales_amount
+        data_type: integer
+
