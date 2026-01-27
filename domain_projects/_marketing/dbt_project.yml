@@ -4,6 +4,10 @@ name: marketing
 version: 2.0
 profile: tpch
 
+dbt-cloud:
+  project-id: '13285'
+  account-host: "pp569.eu1.dbt.com"
+
 seed-paths:
   - data
 model-paths:
