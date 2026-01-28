@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: agg_monthly_orders
-    description:
+    description: ""
     config:
       materialized: table
       contract:
